@@ -10,9 +10,7 @@ OX퀴즈의 결과가 주어졌을 때, 점수를 구하는 프로그램을 작성하시오.
 각 테스트 케이스마다 점수를 출력한다.
  */
 package com.Day8;
-
 import java.util.Scanner;
-
 public class chapter6_03 {
 
 	public static int Sum(int num) {
@@ -50,7 +48,6 @@ public class chapter6_03 {
 				count = 0;
 			} // end or for
 			arr[i] = sum;
-
 		}
 		for (int i = 0; i < arr.length; i++) {
 			System.out.println(arr[i]);
