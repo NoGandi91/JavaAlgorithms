@@ -14,28 +14,30 @@ import java.util.Scanner;
 public class chapter9_01 {
 
 	public static void main(String[] args) {
-
+		// TODO Auto-generated method stub
 		Scanner sc = new Scanner(System.in);
-		int arr[] = new int[1000];
-		int num;
-		num = sc.nextInt();
-
-		for (int i = 0; i < num; i++) {
-			arr[i] = sc.nextInt();
+		int N = sc.nextInt();
+		int num[] = new int[N];
+		int temp;
+		
+		//num[] 0~N번 째 배열에 입력값 저장
+		for(int i=0; i<N; i++) {
+			num[i] = sc.nextInt();
 		}
-
-		for (int i = 0; i < num; i++) {
-			for (int j = i + 1; j < num; j++) {
-				if (arr[i] > arr[j]) {
-					int temp = arr[i];
-					arr[i] = arr[j];
-					arr[j] = temp;
-				}
+		
+		//오름차순 정렬
+		for(int i=0; i<num.length-1; i++) {
+			for(int j=i+1; j<num.length; j++) {
+				if(num[i]>num[j]) {
+					temp = num[i];
+					num[i] = num[j];
+					num[j] = temp;
+				}				
 			}
 		}
-
-		for (int k = 0; k < num; k++) {
-			System.out.println(arr[k]);
+		//정렬 된 수를 출력
+		for(int i=0; i<num.length; i++) {
+			System.out.println(num[i]);
 		}
 	}
 }
