@@ -21,29 +21,35 @@ package com.Day12;
 import java.util.Scanner;
 
 public class chapter14_01 {
-	
+
 	public static int pibo(int N) {
-		int sum = 0;
+		int result = 0;
 		int num = N;
-		
-		if(num==1) 
-			sum= sum + 1;
-		
-		if(num>1) {
-			sum = N + pibo(num-1);
+
+		if (num == 0) {
+			result = 0;
 		}
-		
-			
-		return sum;
+		if (num == 1)
+			result = result + 1;
+
+		if (num >= 2) {
+			result = pibo(num - 1) + pibo(num - 2);
+		}
+
+		return result;
 	}
 
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
 		Scanner sc = new Scanner(System.in);
 		int num = sc.nextInt();
-		
-		if(num<=45 && num>=1) {
-		System.out.println(pibo(num));
+		try {
+			if (num <= 45 && num >= 1) {
+				System.out.println(pibo(num));
+			}
+		} catch (Exception e) {
+			// TODO: handle exception
 		}
+
 	}
 }
