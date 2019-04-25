@@ -29,7 +29,7 @@ public class Chapter19_02 {
 		int A = 64;
 		int count=0;
 		int X = sc.nextInt();
-		
+		 
 		while(X>0) {
 			if(A > X) {
 				A = A / 2;
