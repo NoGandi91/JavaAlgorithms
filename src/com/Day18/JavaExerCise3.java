@@ -7,7 +7,7 @@
 
 package com.Day18;
 
-public class JavaExerCise3 {
+public class JavaExerCise3 { 
 
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
